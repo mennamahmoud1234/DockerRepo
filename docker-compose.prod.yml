@@ -1,0 +1,9 @@
+services:
+  node-app:
+    build:
+      context: . # build image from current Dockerfile
+      args:
+        NODE_ENV: production # pass arg to Dockerfile
+    environment:
+      NODE_ENV: production
+    command: npm start # override command based on env

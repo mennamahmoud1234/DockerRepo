@@ -1,0 +1,17 @@
+version: "3"
+services:
+  node-app:
+   build:
+    context: . # build image from current docker file
+    args:
+     - NODE_ENV=development # pass arg to dockerfile
+   volumes:
+    - .:/app
+   environment:
+    NODE_ENV: development
+   command: npm run start-dev
+
+
+
+
+
