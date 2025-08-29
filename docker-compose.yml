@@ -7,17 +7,17 @@ services:
     - "4000:4000"
    environment:
     PORT: 4000
-   depends_on:
-    - mongo 
-  mongo:
-    image: mongo
-    restart: always
-    volumes:
-      - mongo_db:/data/db   #mongo_db this volumn name i created it down to store data
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-volumes:
-   mongo_db: # name of volume
+  #  depends_on:
+  #   - mongo 
+#   mongo:
+#     image: mongo
+#     restart: always
+#     volumes:
+#       - mongo_db:/data/db   #mongo_db this volumn name i created it down to store data
+#     environment:
+#       MONGO_INITDB_ROOT_USERNAME: root
+#       MONGO_INITDB_ROOT_PASSWORD: example
+# volumes:
+#    mongo_db: # name of volume
 
 
