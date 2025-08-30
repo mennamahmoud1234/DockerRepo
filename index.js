@@ -12,5 +12,5 @@ mongoose.connect(URI)
 .then(()=>console.log('connect to db'))
 .catch((err)=>console.log('failed to connect to db',err))
 ;
-app.get('/',(req,res)=>res.send('<h1>Hello Manoshhhhhhhh El katkota </h1>'));
+app.get('/',(req,res)=>res.send('<h1>Hello Manoshhhhhhhh El katkota from docker hub </h1>'));
 app.listen(PORT,()=>console.log(`app is up and running on port :${PORT}`));

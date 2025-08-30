@@ -2,6 +2,7 @@
 services:
   node-app:
    container_name: express-node-app-container
+   image: menna12345/node-app  # name of repo in docker hub to push image 
    build: .
    ports:
     - "4000:4000"
