@@ -1,5 +1,6 @@
 const express= require('express');
 const mongoose= require('mongoose');
+const os= require('os');
 const PORT= process.env.PORT ||4000;
 const app = express ();
 const DB_USER='root';
@@ -12,5 +13,8 @@ mongoose.connect(URI)
 .then(()=>console.log('connect to db'))
 .catch((err)=>console.log('failed to connect to db',err))
 ;
-app.get('/',(req,res)=>res.send('<h1>Hello Manoshhhhhhhh El katkota from docker hub </h1>'));
+app.get('/', (req, res) => {
+    console.log(`hello from ${os.hostname}`);
+    res.send('<h1>Hello Manoshhhhhhhh El katkota with watchtower </h1>');
+});
 app.listen(PORT,()=>console.log(`app is up and running on port :${PORT}`));

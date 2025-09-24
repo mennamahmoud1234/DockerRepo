@@ -1,13 +1,21 @@
 
 services:
   node-app:
-   container_name: express-node-app-container
+   #container_name: express-node-app-container     # comment for load balancing
    image: menna12345/node-app  # name of repo in docker hub to push image 
    build: .
-   ports:
-    - "4000:4000"
+  #  ports:
+  #   - "4000:4000"   # comment for load balancing
    environment:
     PORT: 4000
+   deploy:
+      replicas: 4
+      update_config:
+       parallelism: 2
+       delay: 10s
+      restart_policy:
+       condition: on-failure
+       delay: 5s
    depends_on:
     - mongo 
   mongo:
