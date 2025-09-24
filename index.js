@@ -15,6 +15,6 @@ mongoose.connect(URI)
 ;
 app.get('/', (req, res) => {
     console.log(`hello from ${os.hostname}`);
-    res.send('<h1>Hello Manoshhhhhhhh El katkota with watchtower </h1>');
+    res.send('<h1>Hello Manoshhhhhhhh El katkota with watchtower and docker swarmmmmmmmmmmm </h1>');
 });
 app.listen(PORT,()=>console.log(`app is up and running on port :${PORT}`));
